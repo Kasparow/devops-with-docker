@@ -1,0 +1,4 @@
+> docker build -t spring-example .
+> docker run -p 8080:8080 spring-example
+# open browser localhost:8080
+# press button 'Press here' and get 'Success' message

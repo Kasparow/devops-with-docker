@@ -1,0 +1,6 @@
+> docker build -t backend-example .
+> docker run -v $(pwd)/logs.txt:/backend-example-docker/logs.txt -p 8000:8000 backend-example
+# open browser localhost:8000
+Port configured correctly, generated message in logs.txt
+# check logs in binded local logs.txt file
+12/15/2019, 4:13:48 PM: Connection received in root

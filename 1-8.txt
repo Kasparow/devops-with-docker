@@ -1,0 +1,11 @@
+# Bind a logs.txt file between filesystem and container
+> touch logs.txt
+> docker run -it -d -v $(pwd)/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
+# after a little waiting of generating logs
+> cat logs.txt
+Sun, 15 Dec 2019 11:13:31 GMT
+Sun, 15 Dec 2019 11:13:34 GMT
+Sun, 15 Dec 2019 11:13:37 GMT
+Sun, 15 Dec 2019 11:13:40 GMT
+Secret message is:
+"Volume bind mount is easy"

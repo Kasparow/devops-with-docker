@@ -1,0 +1,4 @@
+> docker build -t frontend-example .
+> docker run -p 5000:5000 frontend-example
+# open browser localhost:5000 and view 'toska' page with message for task 1.10:
+Exercise 1.10: Congratulations! You configured your ports correctly!

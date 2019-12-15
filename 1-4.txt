@@ -1,0 +1,11 @@
+# Start image devopsdockeruh/exec_bash_exercise
+> docker run -d devopsdockeruh/exec_bash_exercise
+# Go inside the container and use tail -f ./logs.txt to follow the logs. 
+> docker exec -it upbeat_pare bash
+> tail -f ./logs.txt
+Sat, 14 Dec 2019 12:27:27 GMT
+Sat, 14 Dec 2019 12:27:30 GMT
+Sat, 14 Dec 2019 12:27:33 GMT
+Sat, 14 Dec 2019 12:27:36 GMT
+Secret message is:
+"Docker is easy"
