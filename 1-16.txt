@@ -1,0 +1,13 @@
+# pull docker image for heroku example
+> docker pull devopsdockeruh/heroku-example
+# install heroku cli and login to heroku cli
+> brew tap heroku/brew && brew install heroku
+> heroku login
+# tag image and deploy as heroku app
+> docker tag devopsdockeruh/heroku-example registry.heroku.com/heroku-example-docker/web
+> heroku container:login
+Login Succeeded
+> docker push registry.heroku.com/heroku-example-docker/web
+> heroku container:release web -a heroku-example-docker
+Releasing images web to heroku-example-docker... done
+# access the app @ https://heroku-example-docker.herokuapp.com/

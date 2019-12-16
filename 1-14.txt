@@ -1,0 +1,4 @@
+> docker build -t rails-example .
+> docker run -p 3000:3000 rails-example
+# open browser localhost:3000
+# click press and observe the 'Total presses' count increase with a message 'Press was successfully created.'

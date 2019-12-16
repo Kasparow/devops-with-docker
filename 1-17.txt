@@ -1,0 +1,6 @@
+# I wanted to create an image to quickly start a data analytics project 
+# with python environment equipped with scientific computation packages,
+# visualization, machine learning libraries and basic data mungling tools
+> docker build -t py-datascience .
+> docker tag py-datascience kaszparow/py-datascience
+> docker push kaszparow/py-datascience

@@ -1,0 +1,5 @@
+> docker run python-example
+Hello Helsinki!
+# next tag the image and push to docker hub
+> docker tag python-example kaszparow/python-example
+> docker push kaszparow/python-example
