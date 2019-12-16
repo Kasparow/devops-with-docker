@@ -1,0 +1,6 @@
+# create a log file for logging from backend service
+> touch logs.txt
+# start both backend and front end services with correct port configurations
+> docker run -v $(pwd)/logs.txt:/backend-example-docker/logs.txt -p 8000:8000 backend-example
+> docker run -p 5000:5000 frontend-example
+# after front end server has started, open browser with localhost:5000 and click 1.12 ping button

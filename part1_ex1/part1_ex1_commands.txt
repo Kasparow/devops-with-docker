@@ -1,0 +1,16 @@
+# Start 3 containers from image that does not automatically exit, such as nginx, detached.
+> docker run -d nginx
+> docker run -d nginx
+> docker run -d nginx
+
+# Stop 2 of the containers leaving 1 up.
+# first list containers to view the 3 running nginx containers
+> docker container ls -a
+# stop+remove two containers
+> docker stop e6; docker rm e6;
+> docker stop f7; docker rm f7;
+
+# Prove that you have completed this part of exercise by delivering the output for docker ps -a.
+> docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+1c9d37e4e6eb        nginx               "nginx -g 'daemon of…"   6 minutes ago       Up 6 minutes        80/tcp              objective_nobel
