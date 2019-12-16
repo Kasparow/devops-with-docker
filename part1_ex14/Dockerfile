@@ -5,7 +5,7 @@ RUN apt-get install -y curl wget
 RUN apt-get install -y git
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
 
-COPY . /ruby-example-docker
+COPY ./rails-example-project /ruby-example-docker
 WORKDIR /ruby-example-docker
 
 RUN apt install -y nodejs

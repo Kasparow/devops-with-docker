@@ -1,3 +1,6 @@
+# build python-example
+> docker build -t python-example .
+# run container
 > docker run python-example
 Hello Helsinki!
 # next tag the image and push to docker hub
