@@ -1,0 +1,6 @@
+# clone exercise git repository and move working dir there
+> git clone https://github.com/docker-hy/scaling-exercise.git
+> cd scaling-exercise
+# run docker-compose with large number of instances provisioned to compute-resource
+> docker-compose up --scale compute=6
+# With 6 compute instances the response-bar is able to complete before even half of the timer is consumed
