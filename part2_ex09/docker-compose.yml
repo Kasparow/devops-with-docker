@@ -1,0 +1,32 @@
+version: '3.5' 
+
+services: 
+    backend_service:
+      image: backend-example
+      ports: 
+        - 8000:8000
+      environment: 
+        - FRONT_URL=http://localhost:5000
+        - DB_HOST=db
+        - DB_NAME=postgres_db
+        - DB_USERNAME=admin
+        - DB_PASSWORD=1234
+      depends_on: 
+        - db
+
+    db:
+      image: postgres
+      restart: unless-stopped
+      environment:
+        - POSTGRES_DB=postgres_db
+        - POSTGRES_USER=admin
+        - POSTGRES_PASSWORD=1234
+      volumes:
+        - /Users/kasperi/Documents/university/devops-with-docker/part2_ex09/database:/var/lib/postgresql/data
+
+    frontend_service:
+      image: frontend-example
+      ports: 
+        - 5000:5000
+      environment:
+        - API_URL=http://localhost:8000
