@@ -1,0 +1,31 @@
+version: '3.5' 
+
+services: 
+    backend_service:
+      image: ml-backend-example
+      ports: 
+        - 5000:5000
+      depends_on: 
+        - training_service
+      environment: 
+        - FRONT_URL=http://localhost:3000
+      volumes:
+        - models:/src/model/
+
+    training_service:
+      image: ml-training-example
+      ports: 
+        - 8000:8000
+      volumes:
+        - models:/src/model/
+        - src/imgs/
+
+    frontend_service:
+      image: ml-frontend-example
+      ports: 
+        - 3000:3000
+      environment:
+        - API_URL=http://localhost:5000
+
+volumes:
+    models:

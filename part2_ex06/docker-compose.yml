@@ -1,0 +1,28 @@
+version: '3.5' 
+
+services: 
+    backend_service:
+      image: backend-example
+      ports: 
+        - 8000:8000
+      container_name: backend_container
+      environment: 
+        - FRONT_URL=http://localhost:5000
+        - DB_HOST=db
+        - DB_NAME=postgres_db
+        - DB_USERNAME=admin
+        - DB_PASSWORD=1234
+    db:
+      image: postgres
+      restart: unless-stopped
+      environment:
+        - POSTGRES_DB=postgres_db
+        - POSTGRES_USER=admin
+        - POSTGRES_PASSWORD=1234
+    frontend_service:
+      image: frontend-example
+      ports: 
+        - 5000:5000
+      environment:
+        - API_URL=http://localhost:8000
+

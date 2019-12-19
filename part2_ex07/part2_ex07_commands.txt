@@ -1,0 +1,8 @@
+# pull repos and build docker images of 'em
+> git clone https://github.com/docker-hy/ml-kurkkumopo-frontend.git
+> git clone https://github.com/docker-hy/ml-kurkkumopo-backend.git
+> git clone https://github.com/docker-hy/ml-kurkkumopo-training.git
+> docker build -t ml-frontend-example ./ml-kurkkumopo-frontend
+> docker build -t ml-backend-example ./ml-kurkkumopo-backend
+> docker build -t ml-training-example ./ml-kurkkumopo-training
+
