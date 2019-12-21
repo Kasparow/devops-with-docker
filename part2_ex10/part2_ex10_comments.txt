@@ -1,0 +1,6 @@
+# what had to be changed to configure all components in backend+frontend app to be configured with reverse proxy:
+
+1. url referencing: reverse proxy handles accessing the services and the urls and route-paths should be listed in nginx.conf file. Docker-compose file doesnt need to handle backend or frontend url referencing anymore.
+
+2. notify reverse proxy of dependency on postgres database: add depends_on flag for proxy service and backend service, since postgres server has to be set up first before backend service connection with the database can be initialized.
+
